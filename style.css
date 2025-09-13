@@ -1,0 +1,132 @@
+:root {
+  --primary: #2e388d;
+  --whatsapp: #25D366;
+  --light-gray: #f7f7f7;
+  --dark-gray: #333;
+  --max-width: 900px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--dark-gray);
+  background: white;
+}
+
+header, section, footer {
+  padding: 2rem 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  background: var(--light-gray);
+  border-radius: 8px;
+  padding: 3rem 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+button, .btn {
+  background: var(--whatsapp);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  color: var(--primary);
+}
+
+.why, .how, .featured {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-top: 2rem;
+}
+
+.steps, .bullets, .testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.steps div, .bullets div {
+  background: var(--light-gray);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.testimonials {
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+.testimonial {
+  width: 30%;
+  background: var(--light-gray);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  background: var(--light-gray);
+  border-top: 1px solid #e0e0e0;
+}
+
+.social a {
+  margin: 0 0.5rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+  .steps, .bullets {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .steps div, .bullets div {
+    flex: 1;
+  }
+  .testimonial {
+    width: auto;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
